@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG version="1.1.1d"
+ARG version="1.1.1g"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         autoconf \
