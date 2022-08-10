@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
-ARG version="1.1.1g"
+ARG version="1.1.1q"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         autoconf \
