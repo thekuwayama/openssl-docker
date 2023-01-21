@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM ubuntu:22.10
 
-ARG version="1.1.1q"
+ARG version="3.0.7"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         autoconf \
@@ -21,7 +21,7 @@ RUN curl -s https://www.openssl.org/source/openssl-${version}.tar.gz | tar -C /b
         ./Configure \
         --prefix=/opt/openssl/openssl-${version} \
         enable-crypto-mdebug enable-crypto-mdebug-backtrace \
-        linux-x86_64 && \
+        linux-aarch64 && \
         make && make install_sw
 
 ENV LD_LIBRARY_PATH /opt/openssl/openssl-${version}/lib
