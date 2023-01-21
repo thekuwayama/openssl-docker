@@ -21,7 +21,7 @@ RUN curl -s https://www.openssl.org/source/openssl-${version}.tar.gz | tar -C /b
         ./Configure \
         --prefix=/opt/openssl/openssl-${version} \
         enable-crypto-mdebug enable-crypto-mdebug-backtrace \
-        linux-x86_64 && \
+        linux-aarch64 && \
         make && make install_sw
 
 ENV LD_LIBRARY_PATH /opt/openssl/openssl-${version}/lib
